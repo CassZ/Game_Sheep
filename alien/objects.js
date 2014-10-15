@@ -11,6 +11,7 @@ function ship(canvas,x, y, w, h) {
 	var exp=0;
 	var img_use=1;
 	
+	// cass is good
 	this.is_trapped=function(){
 		//alert("none");
 		if(this.x > (canvas.width/2-10) && this.x < (canvas.width/2+10) && 
