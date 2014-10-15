@@ -12,10 +12,9 @@ function ship(canvas,x, y, w, h) {
 	var img_use=1;
 	
 	// cass is good
-	this.is_trapped=function(){
-		//alert("none");
-		if(this.x > (canvas.width/2-10) && this.x < (canvas.width/2+10) && 
-			this.y > (canvas.height/2-10) && this.y < (canvas.height/2+10)){
+	this.is_trapped=function(trapx,trapy,trapw,traph){
+		if(this.x > (trapx) && this.x < (trapx + trapw) && 
+			this.y > (trapy) && this.y < (trapy-traph)){
 			return true;
 		}else {
 			return false;
@@ -87,7 +86,7 @@ function ship(canvas,x, y, w, h) {
 	this.draw=function(){				
 		this.context.drawImage(ship_images[img_use],this.x,this.y);
 		//draw one trap
-		this.context.drawImage(trap_images[1], (canvas.width/2), (canvas.height/2));
+		//this.context.drawImage(trap_images[1], (canvas.width/2), (canvas.height/2));
 	}
 
 }
@@ -262,6 +261,7 @@ function trap(canvas,x, y, w, h, type) {
 	this.y=y;
 	this.w=w;
 	this.h=h;
+	//type 1: mud, 2:chicken
 	this.type=type
 	
 	this.draw=function(){

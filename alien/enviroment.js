@@ -32,6 +32,7 @@ var up_touch_flag=false;
 var down_touch_flag=false;
 var left_touch_flag=false;
 var down_touch_flag=false;
+var iTrap;
 
 load_images();
 
@@ -53,6 +54,8 @@ function time(){
 
 	//draw ship
 	mShip.draw();
+	
+	iTrap.draw();
 
 	/* - draw each bullet existed
 	 * - check if bullet hits an alien & perform correspond function

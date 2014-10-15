@@ -199,6 +199,7 @@ function load_game(){
 	modify_prog_bar(0,10);
 	
 	mShip = new ship(canvas, 400, 200, 20, 25);	
+	iTrap = new trap(canvas, 400, 800, 20, 25, 1);
 	create_alien_wave(stage);	
 	stop_flag=false;
 	time();
